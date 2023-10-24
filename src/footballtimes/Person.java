@@ -6,7 +6,8 @@ package footballtimes;
 
 /**
  *
- * @author dougl
+ * @author Douglas Vinicius Dierings Represents a person with attributes that it
+ * is expected from the file, like id, first name, last name, and email.
  */
 public class Person {
 
@@ -15,12 +16,14 @@ public class Person {
     private String lastName;
     private String email;
 
+    // Constructor to initialize a Person object
     public Person(int id, String firstName, String lastName, String email) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
     }
+// Getter and setter methods
 
     public int getId() {
         return id;
@@ -53,7 +56,8 @@ public class Person {
     public void setEmail(String email) {
         this.email = email;
     }
-
+    
+    // toString method to provide a string with the infos from the player
     @Override
     public String toString() {
         return "Person{" + "id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + '}';

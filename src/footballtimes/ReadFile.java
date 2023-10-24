@@ -10,17 +10,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
- * @author dougl
+ * @author Douglas Vinicius Dierings
+ * This class is responsible for reading data from a CSV file and creating a list of Person objects.
  */
 public class ReadFile {
-
+    //Constructor
     public List ReadFile() {
         List<Person> people = new ArrayList<>();
         try {
-
+            // Define the path to the CSV file (it is final so it can be changed)
             final String locationFile = "C:\\Users\\dougl\\Documents\\NetBeansProjects\\FootballTimes\\MOCK_DATA.csv";
+            // Open and read the CSV file
             BufferedReader reader = new BufferedReader(new FileReader(locationFile));
+            //Stores one line of the file witch are the all info for one person
             String line;
 
             while ((line = reader.readLine()) != null) {
@@ -34,8 +36,9 @@ public class ReadFile {
             }
 
         } catch (Exception e) {
-            System.out.println("Erro de acesso ao arquivo!");
+            System.out.println("File access error!");
         }
+        //Return a list of the people in the file
         return people;
     }
 

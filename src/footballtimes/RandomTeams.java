@@ -9,12 +9,14 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- *
- * @author dougl
+ * @author Douglas Vinicius Dierings
+ * @param people The list of people to form teams from.
+ * Generate random teams based on a list of people.
  */
 public class RandomTeams {
 
-    public RandomTeams(List people) {
+    public List generateTeams(List people) {
+        // Define an array of team names
         String teamNames[] = {
             "Flamengo",
             "Palmeiras",
@@ -37,27 +39,24 @@ public class RandomTeams {
             "Vitória",
             "Fortaleza"};
 
+        // Copy the list of people to a local list and shuffle it (it is a easy way to randomize the list in my opinion)
         List peopleList = people;
         Collections.shuffle(peopleList);
 
+        // Generate 20 teams, each with 5 random members
         List<Team> teams = new ArrayList<>();
         for (int i = 0; i < 20; i++) {
             List<Person> teamMembers = new ArrayList<>();
             for (int j = 0; j < 5; j++) {
+                // Remove a person from the shuffled list and add them to the team
                 Person person = (Person) people.remove(0);
                 teamMembers.add(person);
 
             }
+            // Create a Team object and add it to the list of teams with the name of the team
             teams.add(new Team(teamNames[i], teamMembers));
         }
-
-        for (Team team : teams) {
-            System.out.println("Team Name: " + team.getName());
-            for (Person person : team.getMembers()) {
-                System.out.println(person.getFirstName() + " " + person.getLastName());
-            }
-            System.out.println();
-        }
+        return teams;
     }
 
 }
