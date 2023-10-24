@@ -19,7 +19,7 @@ public class ReadFile {
         List<Person> people = new ArrayList<>();
         try {
             // Define the path to the CSV file (it is final so it can be changed)
-            final String locationFile = "C:\\Users\\dougl\\Documents\\NetBeansProjects\\FootballTimes\\MOCK_DATA.csv";
+            final String locationFile = "MOCK_DATA.csv";
             // Open and read the CSV file
             BufferedReader reader = new BufferedReader(new FileReader(locationFile));
             //Stores one line of the file witch are the all info for one person
