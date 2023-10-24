@@ -15,6 +15,10 @@ public class FootballTimes {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        ReadFile data = new ReadFile();
+        
+        
+        
     }
     
 }
