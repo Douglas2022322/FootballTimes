@@ -19,7 +19,7 @@ public class ReadFile {
         List<Person> people = new ArrayList<>();
         try {
 
-            String locationFile = "C:\\Users\\dougl\\Documents\\NetBeansProjects\\FootballTimes\\MOCK_DATA.csv";
+            final String locationFile = "C:\\Users\\dougl\\Documents\\NetBeansProjects\\FootballTimes\\MOCK_DATA.csv";
             BufferedReader reader = new BufferedReader(new FileReader(locationFile));
             String line;
 
